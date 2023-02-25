@@ -1,0 +1,22 @@
+<div class="text-center">
+  <h4>
+    Using @Input and @Output Decorator
+  </h4>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <h6>Parent Component</h6>
+    <h6>Child Suggested Name : {{childSuggestedName}}</h6>
+    <input type="text" placeholder="Type here.." #parentData>&nbsp;
+    <button class="btn btn-success btn-sm" (click)="onDataSend(parentData)">Send</button>
+  </div>
+  <div class="col-md-4">
+
+  </div>
+  <div class="col-md-4">
+    <app-child [Parent2Child] = "pTocName" (child2Parent) = "receivedChildData($event)"></app-child>
+  </div>
+</div>
+
+
+
